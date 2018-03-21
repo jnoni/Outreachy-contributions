@@ -154,11 +154,88 @@ tweets_by_type.transpose().plot(kind='bar',figsize=(20, 10))
 
 [logo]: https://github.com/Rupal-IIITD/Outreachy-contributions/blob/master/Tell%20your%20Open%20Data%20story/Twitter%20hashtag%20story/Plots/P3.png
 
+```python
+tweets['source_new2'] = ''
+
+for i in range(len(tweets['source_new'])):
+    if tweets['source_new'][i] not in ['Twitter for Android ','Instagram ','Twitter Web Client ','Twitter for iPhone ']:
+        tweets['source_new2'][i] = 'Others'
+    else:
+        tweets['source_new2'][i] = tweets['source_new'][i] 
+
+tweets_by_type2 = tweets.groupby(['source_new2'])['followers_count'].sum()
+tweets_by_type2.rename("",inplace=True)
+explode = (1, 0, 0, 0, 0)
+tweets_by_type2.transpose().plot(kind='pie',figsize=(20, 15),autopct='%1.1f%%',shadow=True,explode=explode)
+plt.legend(bbox_to_anchor=(1, 1), loc=6, borderaxespad=0.)
+plt.title('Number of followers by Source bis', bbox={'facecolor':'0.8', 'pad':5})
+```
+
+![alt text](https://github.com/Rupal-IIITD/Outreachy-contributions/blob/master/Tell%20your%20Open%20Data%20story/Twitter%20hashtag%20story/Plots/P4.png)
+
+**Oservation**: From these plots, we can observe that the most important part of a tweet is sent through iPhone, Android, and Webclient. And only 7% by Instagram and other devices. 
+
+Now we'll move forward with another aspect: localization: longitude and latitude. To display this information through a visualization I'll use “Basemap”. Each red point corresponds to a location.
+
+```python
+plt.figure( figsize=(20,10), facecolor='k')
+m = Basemap(projection='mill',resolution=None,llcrnrlat=-90,urcrnrlat=90,llcrnrlon=-180,urcrnrlon=180)
+m.etopo()
+xpt,ypt = m(np.array(tweets['place_lon']),np.array(tweets['place_lat']))
+lon,lat = m(xpt,ypt,inverse=True)
+m.plot(xpt,ypt,'ro',markersize=np.sqrt(5)) 
+plt.title('Repartition on the globe', bbox={'facecolor':'0.8', 'pad':3})
+plt.show()
+```
+
+![alt text](https://github.com/Rupal-IIITD/Outreachy-contributions/blob/master/Tell%20your%20Open%20Data%20story/Twitter%20hashtag%20story/Plots/P5.png)
+
+## Sentiment analysis
+
+I'll class by type the tweets. I'll distinguish 3 kinds of tweets according to their polarity score. I will have the positive tweets, the neutral tweets, and the negative tweets.
+
+```python
+tweets['text_lem'] = [''.join([WordNetLemmatizer().lemmatize(re.sub('[^A-Za-z]', ' ', line)) for line in lists]).strip() for lists in tweets['text']]       
+vectorizer = TfidfVectorizer(max_df=0.5,max_features=10000,min_df=10,stop_words='english',use_idf=True)
+X = vectorizer.fit_transform(tweets['text_lem'].str.upper())
+sid = SentimentIntensityAnalyzer()
+tweets['sentiment_compound_polarity']=tweets.text_lem.apply(lambda x:sid.polarity_scores(x)['compound'])
+tweets['sentiment_neutral']=tweets.text_lem.apply(lambda x:sid.polarity_scores(x)['neu'])
+tweets['sentiment_negative']=tweets.text_lem.apply(lambda x:sid.polarity_scores(x)['neg'])
+tweets['sentiment_pos']=tweets.text_lem.apply(lambda x:sid.polarity_scores(x)['pos'])
+tweets['sentiment_type']=''
+tweets.loc[tweets.sentiment_compound_polarity>0,'sentiment_type']='POSITIVE'
+tweets.loc[tweets.sentiment_compound_polarity==0,'sentiment_type']='NEUTRAL'
+tweets.loc[tweets.sentiment_compound_polarity<0,'sentiment_type']='NEGATIVE'
+```
+```python
+tweets_sentiment = tweets.groupby(['sentiment_type'])['sentiment_neutral'].count()
+tweets_sentiment.rename("",inplace=True)
+explode = (1, 0, 0)
+plt.subplot(221)
+tweets_sentiment.transpose().plot(kind='barh',figsize=(20, 20))
+plt.title('Sentiment Analysis 1', bbox={'facecolor':'0.8', 'pad':0})
+plt.subplot(222)
+tweets_sentiment.plot(kind='pie',figsize=(20, 20),autopct='%1.1f%%',shadow=True,explode=explode)
+plt.legend(bbox_to_anchor=(1, 1), loc=3, borderaxespad=0.)
+plt.title('Sentiment Analysis 2', bbox={'facecolor':'0.8', 'pad':0})
+plt.show()
+```
+
+![alt text](https://github.com/Rupal-IIITD/Outreachy-contributions/blob/master/Tell%20your%20Open%20Data%20story/Twitter%20hashtag%20story/Plots/P6.png)
+
+```python
+tweets[tweets.sentiment_type == 'NEGATIVE'].text.reset_index(drop = True)[0:5]
+```
+
+```
+0    good morning it's time for pastries almond and...
+1                                   good morning bitch
+2    not a good look when you take a study break to...
+3    good morning niece/ it's been awhile- miss you...
+4                   good morning from hell that is all
+Name: text, dtype: object
+```
 
 
-
-
-
-
-
-
+So, with this we come to the end of our Twitter mining journey!

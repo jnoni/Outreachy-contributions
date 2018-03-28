@@ -1,0 +1,699 @@
+
+Alias: PARTICIPATION-TYPE
+multiple selection (checkbox)
+1) People participate in open source in different ways. Which of the following activities do you engage in? Choose all that apply.
+     Follow updates and discussions of open source projects
+     Use open source applications
+     Use open source software as dependencies in other projects
+     Participate in open source software development (including making feature requests, filing bugs, contribution of documentation or code, project maintenance, etc.)
+     Other - please describe:   
+
+
+<page break>
+
+Alias: CONTRIBUTOR-TYPE
+Logic: Hidden unless: Response to #1 is one of the following answers ("Participate in open source software development (including making feature requests, filing bugs, contribution of documentation or code, project maintenance, etc.)")
+grid
+2) How often do you engage in each of the following activities?
+    COLUMNS:
+     Never
+     Rarely
+     Occasionally
+     Frequently
+    ROWS:  
+     Contribute code
+     Contribute documentation 
+     Maintain project (e.g. review and merge contributions, manage releases) 
+     Report or document bugs and unexpected behaviors 
+     Offer ideas for new features
+     Perform organizational or administrative functions (e.g. manage mailing lists, organize events)
+ 
+ 
+ 
+
+<page break>
+
+Alias: EMPLOYMENT-STATUS
+Logic: Show/hide trigger exists. 
+single choice
+3) Which best describes your employment (paid work) status?
+     Employed full time
+     Employed part time
+     Full time student
+     Temporarily not working
+     Retired or permanently not working (e.g. due to disability)
+     Other - please describe:  
+
+
+Alias: PROFESSIONAL-SOFTWARE
+Logic: Hidden unless: Response to #3 is one of the following answers ("Employed full time","Employed part time")
+single choice
+4) In your main job, how often do you write or otherwise directly contribute to producing software?
+     Frequently
+     Occasionally
+     Rarely
+     Never
+
+
+<page break>
+
+Alias: FUTURE-CONTRIBUTION-INTEREST
+single choice
+5) How interested are you in contributing to open source projects in the future?
+     Very interested
+     Somewhat interested
+     Not too interested
+     Not at all interested
+
+Alias: FUTURE-CONTRIBUTION-LIKELIHOOD
+single choice
+6) How likely are you to contribute to open source projects in the future?
+     Very likely
+     Somewhat likely
+     Somewhat unlikely
+     Very unlikely
+
+
+<page break>
+
+The following questions ask about the things that are important to you when choosing to use or contribute to software projects.
+
+
+
+<page break>
+
+
+Alias: OSS-USER-PRIORITIES
+Logic: Hidden unless: Response to #1 is one of the following answers ("Use open source applications","Use open source software as dependencies in other projects","Participate in open source software development (including making feature requests, filing bugs, contribution of documentation or code, project maintenance, etc.)")
+grid 
+7) When thinking about whether to use open source software, how important are the following things?
+    COLUMNS:
+     Very important to have
+     Somewhat important to have
+     Not important either way
+     Somewhat important not to have
+     Very important not to have
+     Don't know what this is 
+    ROWS:
+     An open source license
+     A code of conduct
+     A contributing guide
+     A contributor's license agreement (CLA)
+     Active development
+     Responsive maintainers
+     A welcoming community
+     Widespread use
+ 
+ 
+ 
+<page break>
+
+Alias: OSS-CONTRIBUTOR-PRIORITIES
+Logic: Hidden unless: Response to #1 is one of the following answers ("Participate in open source software development (including making feature requests, filing bugs, contribution of documentation or code, project maintenance, etc.)")
+grid
+8) When thinking about whether to contribute to an open source project, how important are the following things?
+    COLUMNS:
+     Very important to have
+     Somewhat important to have
+     Not important either way
+     Somewhat important not to have
+     Very important not to have
+     Don't know what this is
+    ROWS:
+     An open source license
+     A code of conduct
+     A contributing guide
+     A contributor's license agreement (CLA)
+     Active development
+     Responsive maintainers
+     A welcoming community
+     Widespread use
+     
+<page break>
+
+Alias: SEEK-OPEN-SOURCE
+single choice
+9) How often do you try to find open source options over other kinds of software?
+     Always
+     Sometimes
+     Rarely
+     Never
+
+
+<page break>
+
+Alias: OSS-UX
+single choice
+10) Do you believe that open source software is generally easier to use than closed source (proprietary) software, harder to use, or about the same? 
+     Generally easier to use
+     Generally harder to use
+     About the same
+
+Alias: OSS-SECURITY
+single choice
+11) Do you believe that open source software is generally more secure than closed source (proprietary) software, less secure, or about the same?
+     Generally more secure
+     Generally less secure
+     About the same
+
+Alias: OSS-STABILITY
+single choice
+12) Do you believe that open source software is generally more stable than closed source (proprietary), less stable, or about the same?
+     Generally more stable
+     Generally less stable
+     About the same
+
+
+<page break>
+
+Alias: INTERNAL-EFFICACY
+13) I have the skills and understanding necessary to make meaningful contributions to open source projects.
+     Strongly agree
+     Somewhat agree
+     Neither agree nor disagree
+     Somewhat disagree
+     Strongly disagree
+
+Alias: EXTERNAL-EFFICACY
+single choice
+14) The open source community values contributions from people like me.
+     Strongly agree
+     Somewhat agree
+     Neither agree nor disagree
+     Somewhat disagree
+     Strongly disagree
+
+Alias: OSS-IDENTIFICATION
+single choice
+15) I consider myself to be a member of the open source (and/or the Free/Libre software) community.
+     Strongly agree
+     Somewhat agree
+     Neither agree nor disagree
+     Somewhat disagree
+     Strongly disagree
+
+
+<page break>
+
+Alias: USER-VALUES
+grid
+16) When using any kind of software, how important are the following things to you?
+    COLUMNS:
+     Extremely important
+     Very important
+     Moderately important
+     Slightly important
+     Not at all important
+    ROWS:
+     Stability 
+     Innovation 
+     Replicability
+     Compatibility
+     Security 
+     Cost
+     Transparency
+     User experience
+     Customizability/Modifiability 
+     Availability of technical support
+     Trusted producer 
+     
+     
+ 
+ 
+
+<page break>
+
+The following questions ask about practices and attitudes about privacy and transparency, both within open source and online in general.
+
+
+
+<page break>
+
+Alias: TRANSPARENCY-PRIVACY-BELIEFS
+single choice
+17) Which of the following statements is closest to your beliefs about attribution in software development?
+     Records of authorship should be required so that end users know who created the source code they are working with.
+     People should be able to contribute code without attribution, if they wish to remain anonymous.
+
+
+<page break>
+
+Alias: INFO-AVAILABILITY
+single choice
+18) In general, how much information about you is publicly available online?
+     A lot of information about me
+     Some information about me
+     A little information about me
+     No information at all about me
+
+
+<page break>
+
+Alias: INFO-JOB
+Logic: Hidden unless: Response to #3 is not one of the following answers ("Retired or permanently not working (e.g. due to disability)")
+single choice
+19) Do you feel that you need to make information available about yourself or your work online for professional reasons?
+     Yes
+     No
+
+
+<page break>
+
+Alias: TRANSPARENCY-PRIVACY-PRACTICES-GENERAL
+single choice
+20) Which of the following best describes your practices around publishing content online, such as posts on social media (e.g. Facebook, Instagram, Twitter, etc.), blogs, and other platforms (not including contributions to open source projects)?
+     I include my real name.
+     I usually use a consistent pseudonym that is easily linked to my real name online.
+     I usually use a consistent pseudonym that is not linked anywhere with my real name online.
+     I take precautions to use different pseudonymns on different platforms.
+     I don't publish this kind of content online.
+
+
+<page break>
+
+Alias: TRANSPARENCY-PRIVACY-PRACTICES
+Logic: Hidden unless: Response to #1 is one of the following answers ("Participate in open source software development (including making feature requests, filing bugs, contribution of documentation or code, project maintenance, etc.)")
+single choice
+21) In your open source contributions, which of the following best describes your own practices?
+     I include my real name.
+     I usually contribute using a consistent pseudonym that is easily linked to my real name online.
+     I usually contribute using a consistent pseudonym that is not linked anywhere with my real name online. 
+     I take precautions to use different usernames in different projects.
+
+
+<page break>
+
+The following set of questions ask about how people find and seek help within the open source community.
+
+
+<page break>
+ 
+Alias: RECEIVED-HELP
+single choice
+22) Some people work on and use open source projects completely on their own, while others receive help from other users or contributors. Other people can help with technical problems, understanding community standards and norms, and making introductions to other people involved in the project or related ones.
+
+Have you ever received any kind of help from other people related to using or contributing to an open source project?
+     Yes
+     No
+
+Alias: FIND-HELPER
+Logic: Hidden unless: #22 is one of the following answers ("Yes")
+single choice
+23) Thinking of the most recent case where someone helped you, how did you find someone to help you?
+     I asked for help in a public forum (e.g. in a GitHub Issue, project mailing list, etc.) and someone responded.
+     I asked a specific person for help.
+     Someone offered me unsolicited help.
+     Other - Please describe:  
+
+Alias: HELPER-PRIOR-RELATIONSHIP
+Logic: Hidden unless: Response to #22 is one of the following answers ("Yes")
+single choice
+24) Which best describes your prior relationship with the person who helped you?
+     We knew each other well.
+     We knew each other a little.
+     I knew of them through their contributions to projects, but didn't know them personally.
+     Total strangers, I didn't know of them previously.
+
+Alias: RECEIVED-HELP-TYPE
+Logic: Hidden unless: Response to #22 is one of the following answers ("Yes")
+single choice
+25) What kind of problem did they help you with?
+ Writing code or otherwise implementing ideas.
+ Installing or using an application.
+ Understanding community norms (e.g. how to submit a contribution, how to communicate effectively).
+ Introductions to other people
+ Other (please describe):  
+
+
+<page break>
+
+
+Alias: PROVIDED-HELP
+single choice
+26) Have you ever provided help for another person on an open source project?
+     Yes
+     No
+
+Alias: FIND-HELPEE
+Logic: Hidden unless: Response to #26 is one of the following answers ("Yes")
+single choice
+27) Thinking of the most recent case where you helped someone, how did you come to help this person?
+     They asked for help in a public forum (e.g. in a GitHub Issue, project mailing list, etc.) and I responded.
+     They asked me directly for help.
+     I reached out to them to offer unsolicited help.
+     Other (please describe):  
+
+Alias: HELPEE-PRIOR-RELATIONSHIP
+Logic: Hidden unless: Response to #26 is one of the following answers ("Yes")
+single choice
+28) Which best describes your prior relationship with the person you helped?
+     We knew each other well.
+     We knew each other a little.
+     I knew of them through their contributions to projects, but didn't know them personally.
+     Total strangers, I didn't know of them previously.
+
+
+Alias: PROVIDED-HELP-TYPE
+Logic: Hidden unless: Response to #26 is one of the following answers ("Yes")
+single choice
+29) What kind of problem did you help them with?
+     Writing code or otherwise implementing ideas.
+     Installing or using an application.
+     Understanding community norms (e.g. how to submit a contribution, how to communicate effectively).
+     Introductions to other people.
+     Other (please describe):  
+
+
+<page break>
+
+The next set of questions is about negative interpersonal experiences in the context of open source projects or communities.
+
+
+<page break>
+
+Alias: DISCOURAGING-BEHAVIOR
+grid
+30) Have you ever observed any of the following in the context of an open source project?
+    COLUMNS:
+     No
+     Yes
+    ROWS:
+     Lack of response to contributions or questions
+     Rejection of contributions without explanation 
+     Dismissive responses to contributions or questions
+     Documentation that is incomplete or difficult to understand
+     Conflict or interpersonal tension between contributors
+     Language or other content that made you feel unwelcome (e.g. profanity, racist jokes, sexual imagery, etc.)
+ 
+ 
+
+
+<page break>
+
+Alias: NEGATIVE-WITNESS
+multiple selection
+31) Have you ever witnessed any of the following behaviors directed at another person in the context of an open source project? (not including something directed at you)
+     Hostility or rudeness
+     Name calling
+     Threats of violence
+     Impersonation
+     Harassment over a sustained period
+     Harassment across multiple platforms
+     Stalking
+     Unsolicited sexual advances or comments
+     Stereotyping based on perceived demographic characteristics
+     Malicious publication of personal information (doxxing)
+     Other (please describe):  
+     None of the above
+
+
+<page break>
+
+Alias: NEGATIVE-EXPERIENCE
+multiple selection
+32) Have you ever experienced any of the following behaviors directed at you in the context of an open source project?
+     Hostility or rudeness
+     Name calling
+     Threats of violence
+     Impersonation
+     Harassment over a sustained period
+     Harassment across multiple platforms
+     Stalking
+     Unsolicited sexual advances or comments
+     Stereotyping based on perceived demographic characteristics
+     Malicious publication of personal information (doxxing)
+     Other (please describe):  
+     None of the above
+
+
+<page break>
+
+
+Alias: NEGATIVE-RESPONSE
+Logic: Hidden unless: Response to #32 is one of the following answers ("Hostility or rudeness","Name calling","Threats of violence","Impersonation","Harassment over a sustained period","Harassment across multiple platforms","Stalking","Unsolicited sexual advances or comments","Stereotyping based on perceived demographic characteristics","Malicious publication of personal information (doxxing)","Other (please describe)")
+multiple selection
+33) Thinking of the last time you experienced harassment, how did you respond? Choose all that apply.
+     Asked the user(s) to stop the harassing behavior
+     Solicited support from other community members
+     Blocked the user(s) harassing me
+     Reported the incident to project maintainers
+     Reported the incident to the hosting service or ISP
+     Consulted legal counsel/ an attorney
+     Contacted law enforcement
+     Other (please describe):  
+     I did not react / ignored the incident
+
+
+<page break>
+
+Logic: Hidden unless: Response to #33 is one of the following answers ("Asked the user(s) to stop the harassing behavior","Solicited support from other community members","Blocked the user(s) harassing me","Reported the incident to project maintainers","Reported the incident to the hosting service or ISP","Consulted legal counsel/ an attorney","Contacted law enforcement")
+grid
+How effective were the following responses?
+    COLUMNS:
+     Not at all effective
+     A little effective
+     Somewhat effective
+     Mostly effective
+     Completely effective
+    ROWS:
+     Piped From selections in #33. 
+
+<page break>
+
+
+Alias: NEGATIVE-CONSEQUENCES
+Logic: Hidden unless: Response to #31 is not exactly equal to ("None of the above") OR Question "Have you ever experienced any of the following behaviors directed at you in the context of an open source project?" #32 is not exactly equal to ("None of the above"))
+multiple selection
+34) As a result of experiencing or witnessing harassment, which, if any, of the following have you done?
+      Stopped contributing to a project
+      Started contributing under a pseudonym
+      Worked, asked questions, or collaborated in private channels more often
+      Changed or deleted a username
+      Removed or changed content on my public online presence
+      Suggested the creation or modification of a Code of Conduct
+      Engaged in private discussion with community members about the issue
+      Engaged in public discussion with community members about the issue
+      Made changes in my life offline (e.g. stopped attending meetups or conferences, etc.)
+      Other (please describe):  
+      None of the above`
+
+
+<page break>
+
+Logic: Hidden unless: Response to #3 is one of the following answers ("Employed full time","Employed part time")
+
+The following set of questions asks about your relationship to open source software in the context of your professional work.
+
+
+<page break>
+
+
+Alias: OSS-AS-JOB
+Logic: Hidden unless: Response to #1 is one of the following answers ("Participate in open source software development (including making feature requests, filing bugs, contribution of documentation or code, project maintenance, etc.)") AND response to #3 is one of the following answers ("Employed full time","Employed part time"))
+single choice
+35) Do you contribute to open source as part of your professional work? In other words, are you paid for any of your time spent on open source contributions? 
+     Yes, directly- some or all of my work duties include contributing to open source projects.
+     Yes, indirectly- I contribute to open source in carrying out my work duties, but I am not required or expected to do so.
+     No.
+
+
+Alias: OSS-AT-WORK
+Logic: Hidden unless: Response to #3 is one of the following answers ("Employed full time","Employed part time")
+single choice
+36) How often do you use open source software in your professional work?
+     Frequently
+     Sometimes
+     Rarely
+     Never
+
+
+<page break>
+
+Alias: OSS-IP-POLICY
+Logic: Hidden unless: Response to #3 is one of the following answers ("Employed full time","Employed part time")
+single choice
+37) How does your employer's intellectual property agreement/policy affect your free-time contributions to open source unrelated to your work?
+     I am not permitted to contribute to open source at all.
+     I am permitted to contribute to open source, but need to ask for permission.
+     I am free to contribute without asking for permission.
+     My employer doesn't have a clear policy on this.
+     I'm not sure.
+     Not applicable
+
+
+Alias: EMPLOYER-POLICY-APPLICATIONS
+Logic: Hidden unless: Response to #3 is one of the following answers ("Employed full time","Employed part time")
+single choice
+38) Which is closest to your employer's policy on using open source software applications?
+     Use of open source applications is encouraged.
+     Use of open source applications is acceptable if it is the most appropriate tool.
+     Use of open source applications is rarely, if ever, permitted.
+     My employer doesn't have a clear policy on this.
+     I'm not sure.
+     Not applicable
+
+
+Alias: EMPLOYER-POLICY-DEPENDENCIES
+Logic: Hidden unless: Response to #3 is one of the following answers ("Employed full time","Employed part time") AND response to #4 is one of the following answers ("Frequently","Occasionally"))
+single choice
+39) Which is closest to your employer's policy on incorporating open source dependencies into your code base?
+     Use of open source dependencies is encouraged.
+     Use of open source dependencies is acceptable if it is the most appropriate tool.
+     Use of open source dependencies is rarely, if ever permitted.
+     My employer doesn't have a clear policy on this.
+     I'm not sure.
+     Not applicable
+
+
+<page break>
+
+
+Alias: OSS-HIRING
+Logic: Hidden unless: Response to #1 is one of the following answers ("Participate in open source software development (including making feature requests, filing bugs, contribution of documentation or code, project maintenance, etc.)") AND response to #3 is one of the following answers ("Employed full time","Employed part time"))
+single choice
+40) How important do you think your involvement in open source was to getting your current job?
+     Very important
+     Somewhat important
+     Not too important
+     Not at all important
+     Not applicable-I hadn't made any contributions when I got this job.
+
+
+<page break>
+
+The following questions are about your personal demographic characteristics and background. This is the last section of the survey.
+
+
+<page break>
+
+
+Alias: IMMIGRATION
+single choice
+41) Do you currently live in a country other than the one in which you were born?
+ Yes, and I intend to stay permanently.
+ Yes, and I intend to stay temporarily.
+ Yes, and I am not sure about my future plans.
+ No, I live in the country where I was born.
+
+
+Alias: MINORITY-HOMECOUNTRY
+Logic: Hidden unless: Response to #41 is one of the following answers ("Yes, and I intend to stay permanently.","Yes, and I intend to stay temporarily.","Yes, and I am not sure about my future plans.")
+single choice
+42) Thinking of where you were born, are you a member of an ethnicity or nationality that is a considered a minority in that country?
+     Yes
+     No
+     Not sure
+     Prefer not to say
+
+Alias: MINORITY-CURRENT-COUNTRY
+single choice
+43) Thinking of where you currently live, are you a member of an ethnicity or nationality that is a considered a minority in that country?
+     Yes
+     No
+     Not sure
+     Prefer not to say
+
+
+<page break>
+
+Alias: GENDER
+single choice
+44) What is your gender?
+     Man
+     Woman
+     Non-binary or Other
+     Prefer not to say
+
+Alias: TRANSGENDER-IDENTITY
+single choice
+45) Do you identify as transgender?
+     Yes
+     No
+     Not sure
+     Prefer not to say
+
+Alias: SEXUAL-ORIENTATION
+single choice
+46) Do you identify as gay, lesbian, bisexual, asexual, or any other minority sexual orientation?
+     Yes
+     No
+     Not sure
+     Prefer not to say
+
+
+<page break>
+
+Alias: WRITTEN-ENGLISH
+single choice
+47) How well can you read and write in English?
+     Very well
+     Moderately well
+     Not very well
+     Not at all
+
+Alias: AGE
+dropdown menu, single choice
+48) What is your age?
+     17 or younger
+     18 to 24 years
+     25 to 34 years
+     35 to 44 years
+     45 to 54 years
+     55 to 64 years
+     65 to 74 years
+     75 years or older
+     Prefer not to say
+
+Alias: FORMAL-EDUCATION
+single choice
+49) What is the highest level of formal education that you have completed?
+     Less than secondary (high) school
+     Secondary (high) school graduate or equivalent
+     Some college, no degree
+     Vocational/trade program or apprenticeship
+     Bachelor's degree
+     Master's degree
+     Doctorate (Ph.D.) or other advanced degree (e.g. M.D., J.D.)
+
+Alias: PARENTS-FORMAL-EDUCATION
+single choice
+50) What is the highest level of formal education that either of your parents completed?
+     Less than secondary (high) school
+     Secondary (high) school graduate or equivalent
+     Some college, no degree
+     Vocational/trade program or apprenticeship
+     Bachelor’s degree
+     Masters’ degree
+     Doctorate (Ph.D.) or other advanced degree (e.g. M.D., J.D.)
+
+
+<page break>
+
+Alias: AGE-AT-FIRST-COMPUTER-INTERNET
+single choice
+51) How old were you when you first had regular access to a computer with an internet connection?
+     Younger than 13 years old
+     13 - 17 years old
+     18 - 24 years old
+     25 - 45 years old
+     Older than 45 years old
+
+Alias: LOCATION-OF-FIRST-COMPUTER-INTERNET
+single choice
+52) Where did you first have regular access to a computer with internet connection?
+     At home (belonging to me or a family member)
+     In a classroom, computer lab, or library at school
+     At a public library or community center
+     At an internet cafe or similar space
+     Other (please describe):  
+
+<page break>
+
+Thank You!
+
+Thank you for participating in the Open Source Survey. We appreciate your time and willingness to contribute to this project. You can follow the project and data release in our public GitHub repo at https://github.com/github/open-source-survey.
+
+
+
+
+

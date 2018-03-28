@@ -1,0 +1,39 @@
+1. Known data quality issues
+ 
+ Due to an implementation error, a number of respondents who selected 'Rudeness or Hostility' on the NEGATIVE-WITNESS question were not able to select additional options, despite the question wording indicating multiple selections were permitted. This was corrected on 3/22/2017 at 11:45am EDT.
+
+ Some responses were submitted after the study period closed for that sample. These appear to be cases where respondents saved the link for completion at a later time.
+
+2. Dates
+
+ - DATE.SUBMITTED: records the timestamp of response submission in Eastern Daylight Time, NOT the local time of the respondent. 
+ 
+2. Recoded data
+
+ Open ended responses have been recoded only in the cases where the frequency of a type of response indicated that the closed response options missed a common case, or where their wording was ambiguous.
+  - LOCATION.OF.FIRST.COMPUTER.INTERNET: open ended responses that indicated a place of employment have been recoded into a new category labeled 'At work (recoded from open ended)'
+  - FIND.HELPER and FIND.HELPEE: open ended responses that indicated public online spaces (e.g. IRC, chat, StackOverflow) were recoded into the category corresponding to asking/asked for help in a public forum. 
+  
+3. Multiple selection questions
+
+ In most cases, respondents who did not answer a question (either due to branching or choosing not to answer) are empty. In the case of multiple selection (checkbox-type) questions, it is more difficult to distinguish non-response on the entire question from a negative response to a particular option. 
+ 
+ For these questions (PARTICIPATION-TYPE, NEGATIVE-WITNESS, NEGATIVE-EXPERIENCE, NEGATIVE-RESPONSE, NEGATIVE-CONSEQUENCES), responses are recorded as sets of binary variables where selection is indicated with 1 and non-selection is indicated with 0. We have added .ANY.RESPONSE
+ variables for these question sets (e.g. PARTICIPATION.TYPE.ANY.RESPONSE), which indicate whether a respondent selected any of the options at all (1) on a given question, and 0 if not. 
+
+ Since all included either 'none of the above' and/or 'other' options, a value of 0 on ANY.RESPONSE for a question set can be reasonably interpreted as skipping the question entirely. We recommend excluding rows for which the corresponding .ANY.RESPONSE variable is 0 when working with these questions.
+
+4. Different samples
+
+ As described in the methodology section, this data originates from a random sampling process on GitHub.com, and a non-random invitation process from off-site communities. Because the sampling process is so different between the two sets, we recommend interpreting differences between the two groups cautiously.
+ 
+ - POPULATION indicates whether responses originate from the GitHub.com sample, and the smaller and non-random off-site sample. 
+ - OFF.SITE.ID provides an anonymized identifier for responses originating from off-site communities, for use with fixed-effects models, clustered standard errors, etc. 
+
+5. Language
+
+ The survey was presented in English by default.  The introductory text included directions to finding selecting an alternative language (Traditional Chinese, Japanese, Spanish, and Russian). Translations were obtained through a paid vendor, with validation and corrections from the open source community via the public project repository. Despite great contributions from the community; there may be discrepancies in the instrument between the English version and translations, particularly in the wording of response scales. 
+
+ - TRANSLATED indicates whether a respondent completed the English version of the questionnaire (0) or one of the translations (1).
+
+

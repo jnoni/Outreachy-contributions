@@ -43,21 +43,75 @@ The columns of the dataset contains there questions are the column header.
 Response ID	Date submitted	Last page	Start language	How important is User Experience for your?  Good user experience means functional requirements are covered completely, the program is easy to use, and it is a pleasure the work with it.	How important is Replicability for you?  Anyone can read the source code, understand how a function computes, and use it for their own projects.	How important is Transparency for you?  The project permits use, study, and modification of the source code without restriction, and as a normal user you are regularly informed about all aspects.	How important is it to have a Trusted Producer?  Trust in the producer (or rather publisher) means you know the organization and people for years and can rely on the product in the future.	How important is the availability of Technical Support for you?  Technical support in terms of the availability of wikis and forums, as well as the possibility to contact experts and even developers.	How important is Stability for you?  Stability means the program functions properly and does not hang or crash on unexpected conditions.	How important is Security for you?  Security is the protection from information theft or damage as well as from disruption or misdirection of services.	How important is the Cost factor for you?  Open Source software is usually free of charge but might have follow-up costs for training and administration, for instance.	How important is Compatibility for you? This terms means to load data processed with old software versions (backward compatibility) as well as the compatibility across different programs and platforms.	How important is Customizability/Modifiability for you?  The term means you can adapt the program to your personal needs and preferences regarding the visual appearance as well as the workflow.	What other office suites do you use on a regular basis? [Apache OpenOffice]	What other office suites do you use on a regular basis? [Apple iWork]	What other office suites do you use on a regular basis? [Calligra Suite]	What other office suites do you use on a regular basis? [Corel WordPerfect Office]	What other office suites do you use on a regular basis? [Google Docs]	What other office suites do you use on a regular basis? [Kingsoft WPS Office]	What other office suites do you use on a regular basis? [Microsoft Office]	What other office suites do you use on a regular basis? [NeoOffice]	What other office suites do you use on a regular basis? [OnlyOffice]	What other office suites do you use on a regular basis? [SoftMaker Office]	What other office suites do you use on a regular basis? [Other]	How often do you use an online office suite?	For how many years are you a user of LibreOffice and its predecessor?	Would a colleague or friend ask you how to solve a problem with LibreOffice?	What version of LibreOffice do you currently run in production (ie. not just for testing)?	What's your affiliation with the project? [Normal user]	What's your affiliation with the project? [Administration]	What's your affiliation with the project? [Development/Design]	What's your affiliation with the project? [Help authoring/User support at ask.libreoffice.org]	What's your affiliation with the project? [Marketing]	What's your affiliation with the project? [Localization]	What's your affiliation with the project? [QA: reporting, testing, confirming bugs]	What's your affiliation with the project? [Training]	Are you member of The Document Foundation?	What is your operating system?	What is your operating system? [Other]
 ```
 
-
-### The study is done in cmparison with the open source study done by Github.
+### The study is done in comparison with the open source study done by Github.
 
 ## Results
 
 Users were asked to give rating to each of the questions from "Not at all important" to "Extremely important". Since we are mostly interested in a comparison with the other study, both are shown in the graphic, in gray for GitHub and black for LibreOffice results.
 
+![alt text](https://github.com/Rupal-IIITD/Outreachy-contributions/blob/master/Tell%20your%20Open%20Data%20story/What%20open%20source%20means%20to%20you/Plots/1.PNG)
 
+In this figure, importance of aspects (which I listed above in bullet points) is shown. Points represent the average and whiskers the confidence interval. “Less important” doesn't necessarily mean "not important". All aspects are above the average of Moderately important.
 
+### Inference:
 
+The results of both studies are comparable with higher appraisal of stability, UX (user experience), and compatibility where transparency, customizability, costs, and replicability are rated lower. The most striking result is that having a Trusted Producer (or publisher) is much more relevant for users of LibreOffice.
 
+Interesting for marketing is what office tools are used regularly. This question was asked as multiple choice and figure 2 shows – on the left – how often one of the predefined answers was checked and on the right how many different tools are used in total. 
+Basically the question asked was: "What other office suites do you use on a regular basis?"
 
+#### Not surprisingly Microsoft Word and Google Docs are used most often.
 
+![alt text](https://github.com/Rupal-IIITD/Outreachy-contributions/blob/master/Tell%20your%20Open%20Data%20story/What%20open%20source%20means%20to%20you/Plots/2.PNG)
 
+Participants had the chance to freely enter text for Other tools. AbiWord, Hancom Office, Lotus Smartsuite, Mobisystems, Polaris Office, Quattro Pro, Typora, Zoho and some text editors were mentioned but also Collabora Online is seen as a separate product.
 
+It was even more interesting to know "how often an online suite is used".
 
+![alt text](https://github.com/Rupal-IIITD/Outreachy-contributions/blob/master/Tell%20your%20Open%20Data%20story/What%20open%20source%20means%20to%20you/Plots/3.PNG)
 
+Next interesting question is how loyal our users are and asked for how many years they have been using LibreOffice. 
 
+The average is 9.3 with two peaks at 5 and 15 years (as shown below) possibly because people do not remember exactly when they started.
+
+![alt text](https://github.com/Rupal-IIITD/Outreachy-contributions/blob/master/Tell%20your%20Open%20Data%20story/What%20open%20source%20means%20to%20you/Plots/4.PNG)
+
+Next question was about expertise. As self-estimation of being an expert is sometimes not easy they rather asked whether a colleague or friend would ask to solve a problem with LibreOffice. It is interesting if those participants who are more expert than others have a different view on the open source aspects. And the results make sense: the ‘advanced’ categories Transparency, Replicability, and Trusted Producer are valued significantly higher. The following results in shows data from LibreOffice only, the asterisks indicate significant differences based on MAONVA statistics.
+
+![alt text](https://github.com/Rupal-IIITD/Outreachy-contributions/blob/master/Tell%20your%20Open%20Data%20story/What%20open%20source%20means%20to%20you/Plots/5.PNG)
+
+LibreOffice ships two default versions, fresh and stable, where the first contains all newly introduced features while stable is the long-term and feature-frozen release. Furthermore, nightly builds allow a very early look into the development.
+
+![alt text](https://github.com/Rupal-IIITD/Outreachy-contributions/blob/master/Tell%20your%20Open%20Data%20story/What%20open%20source%20means%20to%20you/Plots/6.PNG)
+
+### Inference 
+
+This table shows that fresh and stable are nearly at par, and knowing if users of fresh are more brave is thrilling. And while both groups do not differ on most categories, the users of Stable favor stability, which is not too much surprising, and Fresh look for improvements in the area of User Experience and design.
+
+![alt text](https://github.com/Rupal-IIITD/Outreachy-contributions/blob/master/Tell%20your%20Open%20Data%20story/What%20open%20source%20means%20to%20you/Plots/7.PNG)
+
+The **affiliation** is quite important for an open source project as it lives by to the community. Participation is not restricted to development or special knowledge. Localization, contribution to the help, doing quality checking and not least reporting bugs or enhancement requests is essential for LibreOffice.
+
+It was asked again as multiple choice question, and the following plot shows the breakdown of single answers where on the right-hand side the number of answers is listed.
+
+![alt text](https://github.com/Rupal-IIITD/Outreachy-contributions/blob/master/Tell%20your%20Open%20Data%20story/What%20open%20source%20means%20to%20you/Plots/8.PNG)
+
+And now the **battle between operating systems.**
+
+![alt text](https://github.com/Rupal-IIITD/Outreachy-contributions/blob/master/Tell%20your%20Open%20Data%20story/What%20open%20source%20means%20to%20you/Plots/9.PNG)
+
+![alt text](https://github.com/Rupal-IIITD/Outreachy-contributions/blob/master/Tell%20your%20Open%20Data%20story/What%20open%20source%20means%20to%20you/Plots/10.PNG)
+
+And of course we find the preconception represented in the open source aspects. 
+
+**Linux users value transparency and replicability much higher whereas Windows users are more interested in the costs.**
+
+## Insights and Conclusion
+
+For users of LibreOffice, stability, usability, and compatibility are paramount. Less relevant aspects like transparency and replicability are more appreciated by experts and developers. Quite interesting is the importance to know the publisher (trusted producer), meaning to know the organization and people for years and relying on the product in the future.
+
+##
+
+So, here comes the end of story. I hope you enjoyed reading it. I did too when I saw the data and conclusions published by LibreOffice and straightaway decided to summarize it here.
+
+Thanks for reading!

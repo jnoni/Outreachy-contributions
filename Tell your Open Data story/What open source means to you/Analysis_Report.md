@@ -12,6 +12,33 @@ I believe that open source code, communities, and principles create better softw
 
 This is the motivation behind this survey conducted by LibreOffice i.e to see how we, as a community, are doing.
 
+## Survey Topics
+
+These are the broad survey topics which are focussed on while mining the data and we are more interested in these topics while digging out inferences.
+
+- Transparency vs Privacy: Two strong values within the open source community are commitment to transparency plus privacy and security of information. And as apparent it is, there is some kind of characterstic tension between the two values, as full commitment to either one limits the extent to which the other can be achieved. 
+
+I was referring to one [World Values Survey](https://en.wikipedia.org/wiki/World_Values_Survey) by a worldwide network of social scientists who conducted representative national surveys in almost 100 countries. It aims to explore people’s values and beliefs, how they change over time and what social and political impact they have.
+
+The WVS analyzes a variety of factors and how they change over time like: support for democracy, tolerance of foreigners and ethnic minorities, support for gender equality,impact of religion (if at all), etc.
+
+An interesting observation I found:
+
+Analysis of WVS data made by political scientists Ronald Inglehart and Christian Welzel asserts that there are two major dimensions of cross cultural variation in the world:
+
+    - Additional values versus Secular-rational values and
+    - Survival values versus Self-expression values.
+
+The global cultural map (below) shows how scores of societies are located on these two dimensions. Moving upward on this map reflects the shift from Traditional values to Secular-rational and moving rightward reflects the shift from Survival values to Self–expression values.
+
+![alt text](https://github.com/Rupal-IIITD/Outreachy-contributions/blob/master/Tell%20your%20Open%20Data%20story/What%20open%20source%20means%20to%20you/Plots/11.PNG)
+
+- Mentorship & contributors: In FOSS, self-learning and Autodidactism is common and the strength of it. People often learn from working with or observing others who communicate virtually only and will likely never meet face to face. Important questions that can arise are: How do beginners seek and select mentorship within the open source community? What motivates some individuals to make casual (one-off) contributions to new projects rather than finding a mentor and diving deep into a project and a community? How do people willing to mentor make that known, and how do they select mentees?
+
+- Community safety: Online harassment and bullying is just too rampant. There have been high-profile cases that generated substantial coverage in the press.
+- Consumption: Important questions that arise here can be: who are the consumers? What do they use these projects for? Why do they select open source projects instead of commercial products? To what extent are they engaged with the values of free and open source software?
+- Demographics: How representative is open source of the software developer community of the world population?
+
 ## Important aspects?
 
 For the purpose of this study, LibreOffice asked some very fundamental questions to their users, but splitted the matrix into separate questions and added short explanations since it wouldn't be surprising that audience of LibreOffice is likely not so technically-minded like GitHub developers due to obvious reasons.

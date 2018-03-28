@@ -1,6 +1,6 @@
 Hi there.
 
-This is yet another daat science story of mine.
+This is yet another data science story of mine.
 
 Of late, Github published its Open source survey and dataset was made publicly available.
 
